@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 
-
-
 const Login = () => {
     return (
         <section className="bg-[#F0F2F5] h-[100vh]">

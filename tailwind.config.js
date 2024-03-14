@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        primary:"#fff"
+        primary:"#fff",
+        secondary:"#222222"
       }
     },
     container: {
@@ -15,6 +16,7 @@ export default {
     },
     fontFamily:{
       primary:[ "Roboto", "sans-serif"],
+      secondary:["Lato", "sans-serif"],
     }
   },
   plugins: [],
