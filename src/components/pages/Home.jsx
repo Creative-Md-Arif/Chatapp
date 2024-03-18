@@ -7,7 +7,7 @@ import User from "../GroupItems/User";
 
 const Home = () => {
   return (
-    <div className=" bg-slate-50 h-full w-[100%] ">
+    <div className=" bg-slate-50 h-screen w-[100%] ">
       <div className="flex px-4 w-full">
         <MyGroup />
         <Group />

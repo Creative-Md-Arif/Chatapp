@@ -2,7 +2,7 @@
 
 const UserItems = () => {
     return (
-        <div className="flex justify-between items-center gap-4 my-4">
+        <div className="items flex justify-between items-center gap-4 my-4">
         <div className="flex items-center gap-2">
           <img src="/public/MyGroup1.png" alt="" />
         <div className="flex flex-col ">
