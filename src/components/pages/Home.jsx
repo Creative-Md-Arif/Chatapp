@@ -8,16 +8,16 @@ import User from "../GroupItems/User";
 const Home = () => {
   return (
     <div className=" bg-slate-50 h-screen w-[100%] ">
-      <div className="flex px-4 w-full">
+      <div className="flex ml-4 w-full gap-4">
         <MyGroup />
         <Group />
         <Friends />
       </div>
 
-      <div className="flex px-4">
+      <div className="flex w-full ml-4 gap-4">
         <User />
         <FriendRequest />
-        <Blocklist/>
+        <Blocklist />
       </div>
     </div>
   );
