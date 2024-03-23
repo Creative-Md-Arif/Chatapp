@@ -3,9 +3,9 @@ import FriendRitems from "./FriendRitems";
 
 const FriendRequest = () => {
     return (
-        <div className="groupItems mt-[20px] ml-4 w-1/3 h-[500px] pb-4 px-3 bg-white rounded-xl">
+        <div className="groupItems w-1/3 h-[500px] pb-4 px-3 bg-white rounded-xl">
               <div className="absulate">
-              <div className="flex justify-between items-cente bg-white static pl-12 py-5 w-[490px] rounded-sm shadow-xl">
+              <div className="flex justify-between items-center bg-white static py-5 pl-4 w-[495px]">
                 <h2 className="font-secondary font-semibold text-2xl">Friend Requests</h2>
                 <button className=""> 
                 <IoMdMore className="text-black text-xl"/> 

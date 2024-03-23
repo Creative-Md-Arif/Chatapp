@@ -1,6 +1,40 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 import { Link } from "react-router-dom";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+
+
 
 const Registration = () => {
+
+let [name , setName] = useState("User Name");
+let [email, setEmail] = useState ("user@gmail.com");
+let [password , setPassword] =useState ("12345")
+const auth = getAuth();
+
+
+const handleSubmit = ()=> {
+    
+    createUserWithEmailAndPassword( auth , name, email, password)
+      .then((userCredential) => {
+          name,
+          email,
+          password;
+         const user = userCredential.user;
+      
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+       
+      });
+
+}
+
+
     return (
         <section className="bg-[#F0F2F5] h-[100vh]">
             <div className="container flex flex-col justify-center items-center h-[100%]">
@@ -18,7 +52,7 @@ const Registration = () => {
 
                     <input type="text" placeholder="Password"
                      className="py-3 pl-2 border border-[#DDDFE2] rounded-md"/>
-                    <button className="text-center font-primary text-primary font-bold py-3 bg-[blue] rounded-md ">Sign Up</button>
+                    <button onClick={handleSubmit} className="text-center font-primary text-primary font-bold py-3 bg-[blue] rounded-md ">Sign Up</button>
                     <p className="text-center text-[#1C8AC6]">
                         Alerady Have an account ? {""}
                         <Link className="text-black" to="/login">Sign In</Link>
