@@ -1,12 +1,6 @@
 /* eslint-disable no-unused-vars */
 
 import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
-import { getAuth } from 'firebase/auth';
-
-
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyB8ThQ3us1cIHCT6Ps5uI3WRihRhuYCGpM",
   authDomain: "chat-app-d3549.firebaseapp.com",
@@ -18,7 +12,4 @@ const firebaseConfig = {
 
 
 const app = initializeApp(firebaseConfig);
-const auth =  getAuth (app)
-const database = getDatabase(app);
-
-export default{ auth};
+export default firebaseConfig;

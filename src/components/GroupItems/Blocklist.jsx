@@ -5,11 +5,11 @@ const Blocklist = () => {
   return (
     <div className="groupItems w-1/3 h-[500px] pb-4 px-3 bg-white rounded-xl">
       <div className=" absolute">
-        <div className="flex justify-between items-center bg-white static py-5 pl-4 w-[495px]">
+        <div className="flex justify-between static items-center bg-white py-5 pl-4 border-b-[1px]">
           <h2 className="title font-secondary font-semibold text-2xl">
             Blocklist
           </h2>
-          <button className="">
+          <button className=" pl-[360px]">
             <IoMdMore className="text-black text-xl" />
           </button>
         </div>

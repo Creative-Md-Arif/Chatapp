@@ -9,6 +9,7 @@ import Registration from "./components/pages/Registration";
 import Login from "./components/pages/Login";
 import Home from "./components/pages/Home";
 import Layout from "./components/Layout";
+import Chat from "./components/pages/Chat";
 
 
 
@@ -22,10 +23,9 @@ const App = () => {
      <Route path="/login"element={<Login/>}></Route>
      <Route path="/" element={<Layout/>}>
      <Route index element={<Home />}></Route>
+     <Route path="/chat" element={<Chat />}></Route>
+
      </Route>
-
-
-
      </Route>
       ));
 

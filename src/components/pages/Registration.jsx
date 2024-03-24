@@ -7,32 +7,35 @@ import { useState } from "react";
 
 
 const Registration = () => {
+let [name , setName] = useState("");
+let [email, setEmail] = useState ("");
+let [password , setPassword] = useState ("");
+const [userError , setUserError] = useState ({
+    nameError : '',
+    emailError : '',
+    passwordError  : '',
+});
 
-let [name , setName] = useState("User Name");
-let [email, setEmail] = useState ("user@gmail.com");
-let [password , setPassword] =useState ("12345")
+
 const auth = getAuth();
+
 
 
 const handleSubmit = ()=> {
     
-    createUserWithEmailAndPassword( auth , name, email, password)
-      .then((userCredential) => {
-          name,
-          email,
-          password;
-         const user = userCredential.user;
-      
+    if(!name){
+        console.log("Name Is Required");
+    }    
+
+    createUserWithEmailAndPassword( auth , email, password)
+      .then(() => {
+         console.log("Registration Successful!");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
-       
+        console.log(error.code);
       });
 
-}
+};
 
 
     return (
@@ -43,21 +46,27 @@ const handleSubmit = ()=> {
                  <h3 className=" text-blue-500 font-primary font-bold text-[24px]">Get started with easily register</h3>
                  <p className=" font-primary font-normal text-black text-[16px]">Free register and you can enjoy it</p>
                 </div>
-                <form className="flex flex-col w-[400px] gap-5">
-                    <input type="text" placeholder="Full Name"
-                     className="py-3 pl-2   border border-[#DDDFE2] rounded-md" />
+                <div className="flex flex-col w-[400px] gap-5">
+                    <input onChange={ (e) => setName (e.target.value)}
+                     type="text"
+                     placeholder="Full Name"
+                     className="py-3 pl-2 border border-[#DDDFE2] rounded-md" />
 
-                    <input type="email" placeholder="E-mail" 
-                    className="py-3 pl-2   border border-[#DDDFE2] rounded-md" />
+                    <input onChange={ (e) => setEmail (e.target.value)}
+                     type="email"
+                     placeholder="E-mail" 
+                     className="py-3 pl-2 border border-[#DDDFE2] rounded-md" />
 
-                    <input type="text" placeholder="Password"
+                    <input onChange={ (e) => setPassword (e.target.value)}
+                     type="text"
+                     placeholder="Password"
                      className="py-3 pl-2 border border-[#DDDFE2] rounded-md"/>
                     <button onClick={handleSubmit} className="text-center font-primary text-primary font-bold py-3 bg-[blue] rounded-md ">Sign Up</button>
                     <p className="text-center text-[#1C8AC6]">
                         Alerady Have an account ? {""}
                         <Link className="text-black" to="/login">Sign In</Link>
                     </p>
-                </form>
+                </div>
                 <div>
                 </div>
                </div>
