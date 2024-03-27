@@ -9,7 +9,7 @@ import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
     return (
-        <nav className='w-[300px] h-screen bg-[#F0F2F5] pl-[24px] pt-12 flex flex-col justify-between'>
+        <nav className='w-[300px] h-auto bg-[#F0F2F5] pl-[24px] pt-12 flex flex-col justify-between border-r-2'>
            <div>
             <div className='mainLogo w-12 pb-4'>
                <img src="/public/Chat-logo.jpg" alt="" />

@@ -7,14 +7,14 @@ import User from "../GroupItems/User";
 
 const Home = () => {
   return (
-    <div className=" bg-slate-50 w-screen h-screen pt-4">
+    <div className=" bg-slate-50 w-[100%] pt-5">
       <div className=" flex gap-4 px-4 pb-4">
         <MyGroup />
         <Group />
         <Friends />
       </div>
 
-      <div className="flex gap-4 px-4">
+      <div className="flex gap-4 px-4 pb-5">
         <User />
         <FriendRequest />
         <Blocklist />

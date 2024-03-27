@@ -9,7 +9,7 @@ const FriendRitems = () => {
         </div>
          <div className="flex flex-col gap-1 mb-1">
          <button className=" text-white p-1 bg-blue-600 rounded">Confirm</button>
-         <button className=" text-white p-1 bg-blue-600 rounded">Cancel</button>
+         <button className=" text-white p-1 bg-red-600 rounded">Cancel</button>
          </div>
         </div>
     );
